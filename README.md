@@ -1,4 +1,5 @@
 /*
- * Auth(s): Frandy Slueue @holbertonschool
+ * Auth(s): 
+ *	    Frandy Slueue @holbertonschool
  *	    Oladele Miro @holbertonschool
  */
