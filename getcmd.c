@@ -1,4 +1,4 @@
-#include shell.h
+#include "shell.h"
 
 /**
  * _getline - grabs command from line in stdin
@@ -10,6 +10,10 @@ char* _getline()
 {
     char *line = NULL;
     size_t buflen = 0;
-    getline(&line, &buflen, stdin);
+    ssize_t i;
+
+    i = getline(&line, &buflen, stdin);
+    if (i == EOF)
+	    exit(0);
     return line;
 }

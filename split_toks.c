@@ -5,7 +5,7 @@
  *
  */
 
-char **split_toks(char *line)
+char **_split_toks(char *line)
 {
     int length = 0;
     int capacity = 16;

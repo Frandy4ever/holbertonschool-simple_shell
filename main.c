@@ -1,51 +1,31 @@
 #include "shell.h"
-#include <sys/types.h>
-#include <sys/wait.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
 
 /**
  * main - opens shell and runs basic commands
  *Return: 0 on success
  */
 
-int main(void)
+int main(int ac, char **av)
 {
-	int len, status;
-	char *line, *token;
-	size_t l_s;
-	char delim[] = " \n";
-	char **split_toks = malloc(5 * sizeof(char *));
-	size_t length = 0;
-	pid_t c_pid;
+	char *l_s;
+	char **split_toks;
 
+	if (ac > 1)
+		_execute(av);
 	while (1)
 	{
 		printf("$ ");
-		l_s = getline(&line, &length, stdin);
-		token = strtok(line, delim);
-		for (len = 0; token != NULL && l_s != 0; len++)
+		l_s = _getline();
+		if (l_s == NULL)
 		{
-			split_toks[len] = token;
-			token = strtok(NULL, delim);
+			perror("ERROR");
+			exit(0);
 		}
-		split_toks[len] = NULL;
+		split_toks = _split_toks(l_s);
 		if (split_toks[0] != NULL)
-		{
-			c_pid = fork();
-
-			if (c_pid == 0)
-			{
-				execve(split_toks[0], split_toks, NULL);
-				perror("Error");
-				exit(1);
-			}
-			wait(&status);
-		}
+			_execute(split_toks);
 		free(split_toks);
-		free(line);
-		line = NULL;
+		free(l_s);
+		l_s = NULL;
 	}
 }
