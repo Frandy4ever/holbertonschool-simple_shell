@@ -1,4 +1,4 @@
-#include "main.h"
+:x
 
 char *get_location(char *command)
 {
