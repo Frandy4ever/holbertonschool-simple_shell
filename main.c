@@ -14,7 +14,7 @@ int main(int ac, char **av)
 		_execute(av);
 	while (1)
 	{
-		printf("$ ");
+		printf("($) ");
 		l_s = _getline();
 		if (l_s == NULL)
 		{
