@@ -18,4 +18,10 @@ void _execute(char **args);
 char **_split_toks(char *line);
 char* _getline();
 
+
+void execmd(char **argv);
+char *get_location(char *command);
+
+
+
 #endif /* _SHELL_H_ */
