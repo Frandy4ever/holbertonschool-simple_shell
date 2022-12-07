@@ -17,6 +17,7 @@ char* _getline()
     {
 	    if (isatty(STDIN_FILENO) == 1)
 		    printf("\n");
+	    free(line);
 	    exit(0);
     }
     return line;
