@@ -10,10 +10,14 @@ char* _getline()
 {
     char *line = NULL;
     size_t buflen = 0;
-    ssize_t i;
 
-    i = getline(&line, &buflen, stdin);
-    if (i == EOF)
+    if (isatty(STDIN_FILENO) == 1)
+	    printf("($) ");
+    if (getline(&line, &buflen, stdin) < 0)
+    {
+	    if (isatty(STDIN_FILENO) == 1)
+		    printf("\n");
 	    exit(0);
+    }
     return line;
 }
