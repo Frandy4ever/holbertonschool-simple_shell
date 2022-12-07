@@ -5,11 +5,22 @@
 #include <unistd.h>
 #include <string.h>
 #include <stdlib.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <stddef.h>
+#include <sys/wait.h>
+#include <limits.h>
+#include <signal.h>
+
+void execmd(char **argv);
+char *get_location(char *command);
+void _execute(char **args);
+char **_split_toks(char *line);
+char* _getline();
 
 
 void execmd(char **argv);
 char *get_location(char *command);
-
 
 
 

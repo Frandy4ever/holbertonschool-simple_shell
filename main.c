@@ -1,28 +1,23 @@
 #include "shell.h"
-#include <sys/types.h>
-#include <sys/wait.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
 
 /**
  * main - opens shell and runs basic commands
  *Return: 0 on success
  */
 
-int main(int ac, char **argv)
+int main(int ac __attribute__((unused)), char **av __attribute__((unused)))
 {
-	int len, status
-	size_t l_s;
-	char delim[] = " \n";
-	char **split_toks = malloc(5 * sizeof(char *));
-	size_t length = 0;
-	
-		printf("$ ");
-		
+	char *l_s;
+	char **split_toks;
+
+	while (1)
+	{
+		l_s = _getline();
+		split_toks = _split_toks(l_s);
+		if (split_toks[0] != NULL)
+			_execute(split_toks);
 		free(split_toks);
-		free(line);
-		line = NULL;
+		free(l_s);
+		l_s = NULL;
 	}
 }
