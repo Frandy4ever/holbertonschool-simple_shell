@@ -12,16 +12,29 @@
 #include <limits.h>
 #include <signal.h>
 
+extern char **environ;
+extern char **split_toks;
+
+typedef struct list_s
+{
+	char *str;
+	struct list_s *next;
+}list_t;
+
+void free_list(list_t *head);
+size_t print_list(list_t *h);
+list_t *make_p_list(char *path, list_t *h);
 void execmd(char **argv);
 char *get_location(char *command);
 void _execute(char **args);
 char **_split_toks(char *line);
 char* _getline();
-
-
+char *path_cat(char *cmd, char *path);
+char *get_path(char *name);
+list_t *add_node_end(list_t *head, const char *str);
 void execmd(char **argv);
 char *get_location(char *command);
 
 
 
-#endif /* _SHELL_H_ */
+#endif
