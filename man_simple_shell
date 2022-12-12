@@ -1,0 +1,36 @@
+.Dd 12/12/22
+.Dt simple shell
+.Os Oladele/Frandy
+.Sh NAME
+.Nm hsh
+.Nd holberton simple shell
+.Sh SYNOPSIS
+.Nm
+.Op Ar command_string
+.Sh DESCRIPTION
+.Nm
+a simple implementation of a linux command interpreter that executes commands
+from standard input.
+.El
+.Pp
+.Sh Return Value
+Upon success Return O.
+.Nm
+Upon error, a different value is returned corresponding to the status of the
+program.
+.Pp
+.Sh Files
+.Pp
+.Bl -tag -width -indent
+.It HELPER.C
+contains helper functions
+.It MAIN.C
+entry point to simple shell
+.It SHELL.H
+header file
+.It GETCMD.C
+grabs line from stdin
+.It EXECUTE.C
+executes command
+.It SPLIT_TOKS.C
+splits line returned from getcmd.c
