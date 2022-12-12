@@ -1,15 +1,22 @@
 #include "shell.h"
 
+char **split_toks;
+
 /**
  * main - opens shell and runs basic commands
  *Return: 0 on success
  */
 
-int main(int ac __attribute__((unused)), char **av __attribute__((unused)))
+int main(int ac, char **av)
 {
-	char *l_s;
-	char **split_toks;
+	/*list_t *h = NULL;*/
+	char *l_s/*, *PATH, *name = "PATH="*/;
+	 (void) ac;
+	 (void) av;
 
+	 /* PATH = get_path(name);
+	 printf("got path string: %s \n", PATH);
+	 h = make_p_list(PATH, h);*/
 	while (1)
 	{
 		l_s = _getline();
