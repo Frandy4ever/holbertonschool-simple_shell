@@ -3,10 +3,10 @@
 /**
  * _getline - grabs command from line in stdin
  *
- * Returns: command
+ * Return: command
  */
 
-char* _getline()
+char *_getline(void)
 {
 	char *line = NULL;
 	size_t buflen = 0;
@@ -20,5 +20,5 @@ char* _getline()
 		free(line);
 		exit(0);
 	}
-	return line;
+	return (line);
 }

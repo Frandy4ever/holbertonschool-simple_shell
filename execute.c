@@ -1,8 +1,8 @@
 #include "shell.h"
 
 /**
- *
- *
+ * _execute - creates child process and executes
+ * @args : argument vector from command line
  */
 
 void _execute(char **args)

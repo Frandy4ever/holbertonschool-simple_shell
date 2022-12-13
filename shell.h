@@ -15,11 +15,19 @@
 extern char **environ;
 extern char **split_toks;
 
+/**
+ * struct list_s - singly linked list
+ * @str: character string
+ * @next: points to the next node
+ *
+ * Description: singly linked list node structure
+ *
+ */
 typedef struct list_s
 {
 	char *str;
 	struct list_s *next;
-}list_t;
+} list_t;
 
 void free_list(list_t *head);
 size_t print_list(list_t *h);
@@ -28,7 +36,7 @@ void execmd(char **argv);
 char *get_location(char *command);
 void _execute(char **args);
 char **_split_toks(char *line);
-char* _getline();
+char *_getline(void);
 char *path_cat(char *cmd, char *path);
 char *get_path(char *name);
 list_t *add_node_end(list_t *head, const char *str);

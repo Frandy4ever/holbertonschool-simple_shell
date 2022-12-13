@@ -1,9 +1,9 @@
 #include "shell.h"
 
-char **split_toks;
-
 /**
  * main - opens shell and runs basic commands
+ * @ac : argument count
+ * @av : argument vector
  *Return: 0 on success
  */
 
@@ -14,9 +14,12 @@ int main(int ac, char **av)
 	 (void) ac;
 	 (void) av;
 
-	 /* PATH = get_path(name);
-	 printf("got path string: %s \n", PATH);
-	 h = make_p_list(PATH, h);*/
+	 /*
+	  *PATH = get_path(name);
+	  * printf("got path string: %s \n", PATH);
+	  *h = make_p_list(PATH, h);
+	  */
+
 	while (1)
 	{
 		l_s = _getline();
