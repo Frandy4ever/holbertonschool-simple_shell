@@ -1,18 +1,25 @@
-SIMPLE SHELL
-Description
-In this project, we built a simple implementation of the unix shell.
+# SIMPLE SHELL
 
-Compilation
+## Description
+
+In this project, we built a simple implementation of the unix shell. 
+## Compilation 
+```
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
-Usage
-shell should work like this in interactive mode:
+```
+## Usage
+###### shell should work like this in interactive mode:
+
+```
 $ ./hsh
 ($) /bin/ls
 hsh main.c shell.c
 ($)
 ($) exit
 $
-also like this in non-interactive mode
+```
+###### also like this in non-interactive mode
+```
 $ echo "/bin/ls" | ./hsh
 hsh main.c shell.c test_ls_2
 $$ cat test_ls_2
@@ -23,3 +30,4 @@ $ cat test_ls_2 | ./hsh
 hsh main.c shell.c test_ls_2
 hsh main.c shell.c test_ls_2
 $
+```
