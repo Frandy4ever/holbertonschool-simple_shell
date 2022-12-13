@@ -11,8 +11,9 @@ int main(int ac, char **av)
 {
 	/*list_t *h = NULL;*/
 	char *l_s/*, *PATH, *name = "PATH="*/;
-	 (void) ac;
-	 (void) av;
+	char **split_toks;
+	(void) ac;
+	(void) av;
 
 	 /*
 	  *PATH = get_path(name);
