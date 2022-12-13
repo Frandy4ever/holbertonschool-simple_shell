@@ -12,10 +12,9 @@
 #include <limits.h>
 #include <signal.h>
 
-extern char **environ;
-extern char **split_toks;
+/*extern char **environ;*/
 
-typedef struct list_s
+/*typedef struct list_s
 {
 	char *str;
 	struct list_s *next;
@@ -23,17 +22,13 @@ typedef struct list_s
 
 void free_list(list_t *head);
 size_t print_list(list_t *h);
-list_t *make_p_list(char *path, list_t *h);
-void execmd(char **argv);
-char *get_location(char *command);
+list_t *make_p_list(char *path, list_t *h);*/
 void _execute(char **args);
 char **_split_toks(char *line);
 char* _getline();
-char *path_cat(char *cmd, char *path);
-char *get_path(char *name);
-list_t *add_node_end(list_t *head, const char *str);
-void execmd(char **argv);
-char *get_location(char *command);
+/*char *path_cat(char *cmd, char *path);*/
+/*char *get_path(char *name);*/
+/*list_t *add_node_end(list_t *head, const char *str);*/
 
 
 

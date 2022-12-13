@@ -20,5 +20,5 @@ char* _getline()
 		free(line);
 		exit(0);
 	}
-	return line;
+	return (line);
 }
