@@ -31,7 +31,7 @@ typedef struct list_s
 
 void free_list(list_t *head);
 size_t print_list(list_t *h);
-list_t *make_p_list(char *path, list_t *h);*/
+list_t *make_p_list(char *path, list_t *h);
 void _execute(char **args);
 char **_split_toks(char *line);
 char *_getline(void);

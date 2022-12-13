@@ -15,7 +15,7 @@ int main(int ac __attribute__((unused)), char **av __attribute__((unused)))
 	  * printf("got path string: %s \n", PATH);
 	  *h = make_p_list(PATH, h);
 	  */
-    
+
 	char *l_s;/*, *PATH, *name = "PATH="*/
 	char **split_toks;
 
